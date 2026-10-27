@@ -1,0 +1,116 @@
+{
+  "format": "HXIMAGE3",
+  "canvas": [
+    640,
+    480
+  ],
+  "combined_file": "TF_NATIVE_4images.img",
+  "combined_bytes": 1048576,
+  "combined_sha256": "9e2c02cc6f39ced3334b40550b7c607a82470c677e1d6d8fc4b04eec3d5894ba",
+  "physical_byte_offset": 0,
+  "slot_bytes": 262144,
+  "images": [
+    {
+      "source": "C:\\Users\\76044\\Desktop\\image_1.png",
+      "source_sha256": "fa2d3c60f92f6cab05230e422ac41925574ad0d950c7dcad3ecbfb0612d22b31",
+      "original_size": [
+        4140,
+        2934
+      ],
+      "content_size": [
+        640,
+        454
+      ],
+      "fit": "contain",
+      "background": "black",
+      "encoder": "hq",
+      "width": 640,
+      "height": 480,
+      "payload_bytes": 153600,
+      "crc32": "1E8A16AA",
+      "image": 1,
+      "output": "image1_native.img",
+      "bytes": 154112,
+      "sha256": "d7e333d9c5f3e04ed261b20f43f7294296eb285ba2b8d18854ac580d0d662ee2",
+      "lba": 0,
+      "byte_offset": 0
+    },
+    {
+      "source": "C:\\Users\\76044\\Desktop\\image_2.png",
+      "source_sha256": "9032653f5bd9f9b7db67fa1c06cf02d6cfb25fa5150864640012072315925ed8",
+      "original_size": [
+        4505,
+        2616
+      ],
+      "content_size": [
+        640,
+        372
+      ],
+      "fit": "contain",
+      "background": "black",
+      "encoder": "hq",
+      "width": 640,
+      "height": 480,
+      "payload_bytes": 153600,
+      "crc32": "E88D98F8",
+      "image": 2,
+      "output": "image2_native.img",
+      "bytes": 154112,
+      "sha256": "31153415d88bef71d3252cbded0ac7c48b4c62d1677aa736bea125a8f6892435",
+      "lba": 512,
+      "byte_offset": 262144
+    },
+    {
+      "source": "C:\\Users\\76044\\Desktop\\image_3.png",
+      "source_sha256": "074c603adf42c7fa2f87dccaffe9b1659d44f216cccc1ce2d9498263e522e6de",
+      "original_size": [
+        4032,
+        3024
+      ],
+      "content_size": [
+        640,
+        480
+      ],
+      "fit": "contain",
+      "background": "black",
+      "encoder": "hq",
+      "width": 640,
+      "height": 480,
+      "payload_bytes": 153600,
+      "crc32": "80C15857",
+      "image": 3,
+      "output": "image3_native.img",
+      "bytes": 154112,
+      "sha256": "5b0ff259920ac367a111c657cb68e4087d4ed7248aee1e6763d998b5deb18325",
+      "lba": 1024,
+      "byte_offset": 524288
+    },
+    {
+      "source": "C:\\Users\\76044\\Desktop\\image_4.png",
+      "source_sha256": "b4ecade009433f102b7be9b5e997d97ceff9ee983382ec6fecb3be5a2bfa5b07",
+      "original_size": [
+        1426,
+        885
+      ],
+      "content_size": [
+        640,
+        397
+      ],
+      "fit": "contain",
+      "background": "black",
+      "encoder": "hq",
+      "width": 640,
+      "height": 480,
+      "payload_bytes": 153600,
+      "crc32": "5E721853",
+      "image": 4,
+      "output": "image4_native.img",
+      "bytes": 154112,
+      "sha256": "a0bc8c0f2aeff42d560dab2fc762ed03e218bf197c577c64bb4b6b912e92c25b",
+      "lba": 1536,
+      "byte_offset": 786432
+    }
+  ],
+  "physical_disk_written": false,
+  "bit_rebuild_required": false
+}

@@ -1,0 +1,74 @@
+standard
+***Report Model: tf_hdmi_top Device: EG4S20BG256***
+
+IO Statistics
+#IO                        23   out of    188   12.23%
+  #input                   10
+  #output                  13
+  #inout                    0
+
+LUT Statistics
+#Total_luts              6841
+  #lut4                  4188
+  #lut5                  1441
+  #lut6                     0
+  #lut5_mx41             1212
+  #lut4_alu1b               0
+
+Utilization Statistics
+#lut                    10921   out of  19600   55.72%
+#reg                     5186   out of  19600   26.46%
+#bram                      23   out of     64   35.94%
+  #bram9k                  23
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dsp                        8   out of     29   27.59%
+#pad                       31   out of    188   16.49%
+  #ireg                     8
+  #oreg                    11
+  #treg                     0
+#pll                        1   out of      4   25.00%
+#gclk                       3   out of     16   18.75%
+#csb                        0   out of      2    0.00%
+
+Report Hierarchy Area:
++--------------------------------------------------------------------------------------------------------------------+
+|Instance                              |Module                          |lut     |ripple  |seq     |bram    |dsp     |
++--------------------------------------------------------------------------------------------------------------------+
+|top                                   |tf_hdmi_top                     |9841    |1080    |5205    |23      |8       |
+|  u_clk_wize                          |clk_wize                        |0       |0       |0       |0       |0       |
+|  u_hdmi                              |hdmi                            |1876    |107     |470     |0       |0       |
+|    clock_phy                         |dvi_tx_tmds_phy                 |4       |0       |11      |0       |0       |
+|      u_lane                          |lane_lvds_10_1                  |4       |0       |11      |0       |0       |
+|    tmds_gen[0]$dvi_tx_tmds_phy_inst  |dvi_tx_tmds_phy                 |10      |0       |12      |0       |0       |
+|      u_lane                          |lane_lvds_10_1                  |10      |0       |12      |0       |0       |
+|    tmds_gen[0]$tmds_channel          |tmds_channel                    |87      |12      |14      |0       |0       |
+|    tmds_gen[1]$dvi_tx_tmds_phy_inst  |dvi_tx_tmds_phy                 |10      |0       |12      |0       |0       |
+|      u_lane                          |lane_lvds_10_1                  |10      |0       |12      |0       |0       |
+|    tmds_gen[1]$tmds_channel          |tmds_channel                    |80      |12      |14      |0       |0       |
+|    tmds_gen[2]$dvi_tx_tmds_phy_inst  |dvi_tx_tmds_phy                 |10      |0       |12      |0       |0       |
+|      u_lane                          |lane_lvds_10_1                  |10      |0       |12      |0       |0       |
+|    tmds_gen[2]$tmds_channel          |tmds_channel                    |82      |12      |14      |0       |0       |
+|    true_hdmi_output$packet_assembler |packet_assembler                |201     |0       |45      |0       |0       |
+|    true_hdmi_output$packet_picker    |packet_picker                   |126     |12      |269     |0       |0       |
+|      audio_clock_regeneration_packet |audio_clock_regeneration_packet |15      |8       |38      |0       |0       |
+|  u_image_controller                  |image_controller                |26      |10      |11      |0       |0       |
+|  u_key_debounce                      |key_debounce                    |33      |13      |22      |0       |0       |
+|  u_loader                            |sd_loader                       |271     |23      |359     |0       |0       |
+|  u_media_osd                         |media_osd                       |154     |98      |58      |0       |0       |
+|  u_pause_debounce                    |key_debounce                    |33      |13      |22      |0       |0       |
+|  u_previous_debounce                 |key_debounce                    |33      |13      |22      |0       |0       |
+|  u_replay_debounce                   |key_debounce                    |33      |13      |22      |0       |0       |
+|  u_sd                                |sd_card_top                     |1173    |25      |409     |0       |0       |
+|    transport                         |spi_master                      |63      |5       |44      |0       |0       |
+|  u_sdram                             |sdram_media                     |2065    |315     |1622    |23      |6       |
+|    u_mem                             |sdram_burst                     |605     |17      |610     |0       |0       |
+|    u_raster                          |sdram_bc1_raster                |646     |285     |342     |8       |6       |
+|      u_effect                        |photo_transition_map            |272     |202     |0       |0       |5       |
+|    u_sip                             |sdram_sip                       |0       |0       |0       |0       |0       |
+|    u_upload                          |sdram_upload                    |813     |13      |667     |15      |0       |
+|  u_slide                             |photo_slide                     |110     |19      |62      |0       |0       |
+|  u_switch_tone                       |hdmi_switch_tone                |79      |22      |80      |0       |0       |
+|  u_ui_controls                       |ui_controls                     |43      |5       |28      |0       |0       |
+|  u_video                             |tf_video_player                 |2887    |207     |850     |0       |1       |
++--------------------------------------------------------------------------------------------------------------------+

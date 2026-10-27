@@ -1,0 +1,17 @@
+# Generated TD databases, temporary logs, local executables and simulator output.
+**/tf_hdmi_display_Runs/
+**/log/
+**/.test_deps/
+**/__pycache__/
+*.pyc
+*.vvp
+*.log
+*.logw
+*.dmp
+*.db
+.lock.f
+.DS_Store
+Thumbs.db
+.env
+.env.*
+# Keep the published .bit and media .bin/.img files under version control.

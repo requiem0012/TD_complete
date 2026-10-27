@@ -1,0 +1,19 @@
+{
+  "format": "HXVIDEO2",
+  "slot": 1,
+  "frames": 2,
+  "fps": 8,
+  "duration_seconds": 0.25,
+  "bytes": 156160,
+  "input": "C:\\Users\\76044\\Desktop\\TF_complete_HD_Quality\\tools\\demo0.mp4",
+  "output": "C:\\Users\\76044\\Desktop\\TF_complete_HD_Quality\\tools\\tests\\cli_fast_video.bin",
+  "audio": "48000Hz signed16 mono LE",
+  "encoder_quality": "fast",
+  "slot_bytes": 536870912,
+  "region_bytes": 17179869184,
+  "video_base_bytes": 4294967296,
+  "lba_formula": "8388608 + 0 * 1048576",
+  "lba": 8388608,
+  "byte_offset": 4294967296,
+  "note": "Write raw bytes at the calculated offset; copying into a FAT folder does not work."
+}

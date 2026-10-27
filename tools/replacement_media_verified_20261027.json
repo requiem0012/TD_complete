@@ -1,0 +1,34 @@
+[
+  {
+    "format": "HXVIDEO3",
+    "slot": 1,
+    "frames": 60,
+    "fps": 6,
+    "samples": 8000,
+    "audio_sectors": 32,
+    "record_sectors": 332,
+    "max_frames": 3158,
+    "duration_seconds": 10.0,
+    "bytes": 10199552,
+    "source_start_seconds": 0,
+    "source_end_seconds": 10,
+    "sha256": "aca4eb60849c2d79ef1edb952c19121ecbf2e5eaa038b1455bafb4cfe900474b",
+    "verified": "header CRC, slot, all PCM bytes/padding, first/last HQ BC1 frames"
+  },
+  {
+    "format": "HXVIDEO3",
+    "slot": 2,
+    "frames": 90,
+    "fps": 6,
+    "samples": 8000,
+    "audio_sectors": 32,
+    "record_sectors": 332,
+    "max_frames": 3158,
+    "duration_seconds": 15.0,
+    "bytes": 15299072,
+    "source_start_seconds": 95,
+    "source_end_seconds": 110,
+    "sha256": "ce429c05f829dad2f1a55e705fa0dd888ee16eb0a9263fc16f707a9103f34fd1",
+    "verified": "header CRC, slot, all PCM bytes/padding, first/last HQ BC1 frames"
+  }
+]

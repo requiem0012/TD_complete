@@ -1,0 +1,50 @@
+# ============================================================================
+# tf_hdmi.adc - Anlogic physical constraints (pin assignment).
+#
+# Board : 康芯 HX4S20 (FPGA = Anlogic EG4S20BG256, 256-ball BGA).
+# Net names match the port names in tf_hdmi_top.v exactly.
+#
+# SD card is driven in SPI mode; HDMI is a single TMDS output (HDMI2 connector).
+# Pin locations are cross-checked against the vendor lab examples and the
+# hdmi_tx_display_A demo.
+# ============================================================================
+
+# ---- clock / reset / key ----------------------------------------------------
+set_pin_assignment { sys_clk    } { LOCATION = R7; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { sys_rst_n  } { LOCATION = A2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { key_switch } { LOCATION = B2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { sw1        } { LOCATION = C8; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { sw2        } { LOCATION = C7; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { sw3        } { LOCATION = C6; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { sw4        } { LOCATION = C5; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { key_replay } { LOCATION = C1; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { key_previous } { LOCATION = B1; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+
+# ---- SD card (SPI) ----------------------------------------------------------
+#   SD_DCLK = SD clock  (A14)
+#   SD_MOSI = SD CMD/DI (A13)  data into the card
+#   SD_MISO = SD DAT0/DO(B14)  data out of the card
+#   SD_nCS  = SD DAT3/CS(A12)  chip select
+set_pin_assignment { SD_DCLK } { LOCATION = A14; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { SD_MOSI } { LOCATION = A13; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { SD_MISO } { LOCATION = B14; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment { SD_nCS  } { LOCATION = A12; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+# ---- status LEDs (cathode to FPGA -> active-low) -----------------------------
+set_pin_assignment { LED[0] } { LOCATION = A4; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+set_pin_assignment { LED[1] } { LOCATION = A3; IOSTANDARD = LVCMOS33; DRIVESTRENGTH = 8; PULLTYPE = NONE; }
+
+# ---- HDMI / TMDS differential outputs (both connectors, same signal) ---------
+# Only the positive leg of each pair is listed; TD auto-generates the negative
+# leg from the serializer's differential primitive. HDMI channel map:
+#   D0 = blue (carries HSYNC/VSYNC), D1 = green, D2 = red.
+# Connector 1:
+set_pin_assignment { HDMI_CLK_P } { LOCATION = C3; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D2_P  } { LOCATION = E1; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D1_P  } { LOCATION = F1; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D0_P  } { LOCATION = G5; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+# Connector 2 (fanned out from the same TMDS signal, as in hdmi_tx_display_A):
+set_pin_assignment { HDMI_CLK_P1 } { LOCATION = K1; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D2_P1  } { LOCATION = B3; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D1_P1  } { LOCATION = E3; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
+set_pin_assignment { HDMI_D0_P1  } { LOCATION = F5; IOSTANDARD = LVDS33; PULLTYPE = NONE; }
